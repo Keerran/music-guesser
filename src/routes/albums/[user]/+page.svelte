@@ -76,7 +76,14 @@
 			on:load={setBackground}
 		/>
 	</div>
-	<div class="flex-1 h-full bg-main flex justify-center items-center">
+	<div class="flex-1 h-full bg-main flex flex-col justify-center items-center">
+        <div class="flex mb-4 gap-2">
+            {#each PIXELATIONS.slice(0, -1) as _, i}
+                <div class="w-6 h-6 rounded-full"
+                    style:background={i < guesses ? background : "#fff"}>
+                </div>
+            {/each}
+        </div>
 		<form class="relative" on:submit|preventDefault={submit}>
 			<AlbumSearch name="album" disabled={finished} bind:value={guess} bind:this={inputRef}/>
             {#if finished}
