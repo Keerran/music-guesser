@@ -14,6 +14,9 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/damerau-levenshtein": "^1.0.0",
+		"@types/node": "^20.4.7",
+		"@types/spotify-api": "^0.0.22",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.14",
@@ -30,5 +33,12 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"damerau-levenshtein": "^1.0.8",
+		"fast-average-color": "^9.4.0",
+		"last-fm": "^5.3.0",
+		"musicbrainz-api": "^0.10.3",
+		"query-string": "^8.1.0"
+	}
 }

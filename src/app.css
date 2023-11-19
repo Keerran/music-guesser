@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .button {
+        @apply rounded-md p-2 text-white bg-red-500 font-bold;
+    }
+}
