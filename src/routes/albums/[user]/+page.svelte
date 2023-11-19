@@ -21,7 +21,8 @@
 			answer: `${album.name} - ${album.artist.name}`
 		}));
 	}
-
+    
+    let correct = false;
 	let questions = getQuestions();
 	let index = 0;
 	let guesses = 0;
@@ -45,6 +46,7 @@
 		console.log(guess, question.answer);
 		if (question.answer.toLowerCase() === guess.toLowerCase()) {
             guesses = PIXELATIONS.length - 1;
+            correct = true;
 		}
         else {
             guesses += 1;
@@ -94,6 +96,13 @@
                             style:background={background}>
                         Next
                     </button>
+                    <div class="mt-4 text-white">
+                        {#if correct}
+                            <h1 class="text-3xl font-bold">Correct!</h1>
+                        {:else}
+                            <h1 class="text-3xl font-bold">{question.answer}</h1>
+                        {/if}
+                    </div>
                 </div>
             {/if}
 		</form>
